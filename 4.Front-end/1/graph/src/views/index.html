@@ -133,7 +133,7 @@
           <div class="row h-100">
 
 <!--그래프 부분-->
-            <div class="col-md-6">
+<!--          <div class="col-md-6">
               <div class="card h-100">
                 <div class="card-body">
                   <div class="d-flex justify-content-between mb-4">
@@ -148,42 +148,127 @@
                         <option>Yearly</option>
                       </select>
                     </div> <!-- end of form-group -->
-                  </div> <!-- end of d-flex -->
-                  <canvas id="barChart"></canvas>
-                </div> <!-- end of card-body -->
-              </div> <!-- end of card -->
-            </div> <!-- end of col -->
+<!--              </div> -->    <!-- end of d-flex -->
+<!--                 <canvas id="barChart"></canvas>
+                </div> --> <!-- end of card-body -->
+<!--             </div> --> <!-- end of card -->
+<!--            </div> --><!-- end of col -->
 
-
-
-<!-- 여기부터 살리면 될 듯 -->
+<!--여기부터 살리면 될 듯 -->
 <!-- 그래프 부분. Charts.js 참고 --> 
-            <div class="col-md-6">
-              <div class="card h-100">
-                <div class="card-body">
-                  <div class="d-flex justify-content-between mb-4">
-                    <h2 class="mb-0 text-md">Bookings report</h2>
-                    <div class="form-group mb-0">
-                      <label for="barChartFilter" class="sr-only">Filter revenue</label>
-                      <select class="custom-select" id="barChartFilter">
-                        <option disabled>Filter revenue</option>
-                        <option>Daily</option>
-                        <option>Weekly</option>
-                        <option selected>Monthly</option>
-                        <option>Yearly</option>
-                      </select>
-                    </div> <!-- end of form-group -->
-                  </div> <!-- end of d-flex -->
-                  <canvas id="barChart_two"></canvas>
-                </div> <!-- end of card-body -->
-              </div> <!-- end of card -->
-            </div> <!-- end of col -->
+<!-- <div class="col-md-6">
+  <div class="card h-100">
+    <div class="card-body">
+      <div class="d-flex justify-content-between mb-4">
+        <h2 class="mb-0 text-md">Bookings report</h2>
+        <div class="form-group mb-0">
+          <label for="barChartFilter" class="sr-only">Filter revenue</label>
+          <select class="custom-select" id="barChartFilter">
+            <option disabled>Filter revenue</option>
+            <option>Daily</option>
+            <option>Weekly</option>
+            <option selected>Monthly</option>
+            <option>Yearly</option>
+          </select>
+        </div>  end of form-group -->
+<!--     </div>-->  <!-- end of d-flex -->
+<!--      <canvas id="barChart_two"></canvas>
+    </div>--> <!-- end of card-body -->
+<!--  </div>--> <!-- end of card -->
+<!--</div>--> <!-- end of col -->
 
-          </div> <!-- end of row -->
-        </div> <!-- end of col -->
-        </div>
-        
+<!--</div>--> <!-- end of row -->
+<!-- </div> --> <!-- end of col -->
+<!-- </div>-->
 
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+<figure class="highcharts-figure">
+  <div id="container"></div>
+  <p class="highcharts-description">
+    This chart shows how data labels can be added to the data series. This
+    can increase readability and comprehension for small datasets.
+  </p>
+</figure>
+<script  type="text/javascript">
+  Highcharts.chart('container', {
+    chart: {
+      type: 'line'
+    },
+    title: {
+      text: '요일별 방문 지수'
+    },
+    subtitle: {
+      text: '최근 일주일 지표'
+    },
+    xAxis: {
+      categories: ['월', '화', '수', '목', '금', '토', '일']
+    },
+    yAxis: {
+      title: {
+        text: '방문 테이블 수'
+      }
+    },
+    plotOptions: {
+      line: {
+        dataLabels: {
+          enabled: true
+        },
+        enableMouseTracking: false
+      }
+    },
+    series: [{
+      name: '방문 테이블 수',
+      data: [10, 20, 15, 20, 13, 17, 30]
+    }]
+  });
+  
+  </script>
+  <figure class="highcharts-figure">
+    <div id="container2"></div>
+    <p class="highcharts-description">
+      This chart shows how data labels can be added to the data series. This
+      can increase readability and comprehension for small datasets.
+    </p>
+  </figure>
+  <script  type="text/javascript">
+    Highcharts.chart('container2', {
+      chart: {
+        type: 'line'
+      },
+      title: {
+        text: '요일별 방문 지수'
+      },
+      subtitle: {
+        text: '최근 일주일 지표'
+      },
+      xAxis: {
+        categories: ['월', '화', '수', '목', '금', '토', '일']
+      },
+      yAxis: {
+        title: {
+          text: '방문 테이블 수'
+        }
+      },
+      plotOptions: {
+        line: {
+          dataLabels: {
+            enabled: true
+          },
+          enableMouseTracking: false
+        }
+      },
+      series: [{
+        name: '방문 테이블 수',
+        data: [10, 20, 15, 20, 13, 17, 30]
+      }]
+    });
+    
+    </script>
       <footer class="row mt-3">
         <div class="col">
           <p class="mb-0 text-secondary">&copy; 2019 Alex Andonie. All rights reserved.</p>
