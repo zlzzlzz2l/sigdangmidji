@@ -4,7 +4,7 @@ var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'localhost',    // 호스트 주소
   user     : 'root',           // mysql user
-  password : 'qkrwnstj91',       // mysql password
+  password : '--',       // mysql password
   database : 'food'         // mysql 데이터베이스
 });
 connection.connect();
