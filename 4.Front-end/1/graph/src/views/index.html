@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<!-- <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Alex Andonie">
+
+  <title>pass-ta</title>
+  <meta name="description" content="Matter is a material design system built on top of the latest version of bootstrap. It's released under MIT so you can do whatever you want with it.">
+
+  <meta property="og:title" content="Matter - a material design bootstrap dashboard">
+  <meta property="og:description" content="Matter is a material design system built on top of the latest version of bootstrap. It's released under MIT so you can do whatever you want with it.">
+  <meta property="og:url" content="https://matter.alexandonie.com">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta property="og:site_name" content="Matter - a material design bootstrap dashboard">
+  <meta name="twitter:image:alt" content="Material design bootstrap dashboard">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.0.0/css/perfect-scrollbar.min.css">
+
+  
+</head>-->
+<head>
+  <title>pass-ta</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=B612+Mono|Cabin:400,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../../main/fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="../../../main/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../main/css/jquery-ui.css">
+  <link rel="stylesheet" href="../../../main/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../../../main/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../../../main/css/owl.theme.default.min.css">
+
+  <link rel="stylesheet" href="../../../main/css/jquery.fancybox.min.css">
+
+  <link rel="stylesheet" href="../../../main/fonts/flaticon/font/flaticon.css">
+
+  <link rel="stylesheet" href="../../../main/css/aos.css">
+
+  <link rel="stylesheet" href="../../../main/css/style.css">
+
+</head>
+<body>
+<!--<header class="header">
+    <div class="header-navbar header-navbar-has-shadow">
+      <div class="header-navbar-details">
+        <a href="/" class="d-block no-underline">
+          <h1 class="header-navbar-logo">pass-ta</h1>
+        </a>
+      </div> <!-- end of header-details -->
+
+ <!--   </div> <!-- end of header-navbar -->
+ <!-- </header> -->
+ <div class="site-wrap">
+  
+  <div class="header-top">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6 d-flex">
+          <a href="index.html" class="site-logo">pass-ta</a>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+  <div class="d-flex align-items-start mt-10 mb-8">
+
+    <main class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+        <div class="card">
+        
+        <div style="background-color:black">Map</div>
+        </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body pb-0">
+              <div class="d-flex align-items-center align-items-md-start justify-content-between mb-4">
+                <h2 class="text-md mb-0">Marketing campaigns</h2>
+                <button type="button" class="btn btn-text ml-auto">
+                  <span class="sr-only">Filter table</span>
+                  <i class="zmdi zmdi-filter-list icon icon-lg text-secondary" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="btn btn-text pr-0">
+                  <span class="sr-only">More options</span>
+                  <i class="zmdi zmdi-more-vert icon icon-lg text-secondary" aria-hidden="true"></i>
+                </button>
+              </div> <!-- end of d-flex -->
+            </div> <!-- end of card-body -->
+            <div class="table-responsive">
+              <table class="table table-hover mb-0">
+                <thead>
+                  <tr>
+                    <th style="vertical-align:baseline; padding:8px 3px; text-align:center">상호명</th>
+                    <th style="vertical-align:baseline; padding:8px 3px; text-align:center">현재 상태</th>
+                    <th style="vertical-align:baseline; padding:8px 3px; text-align:center">사용 가능한 좌석</th>
+                    <th style="vertical-align:baseline; padding:8px 3px; text-align:center">예상 대기 시간</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="text-align:center; padding:8px 3px">이찌돈</td>
+                    <td style="text-align:center; padding:8px 3px">
+                      <span class="badge badge-secondary">만석</span> <!--초록색 배경 -success 입력-->
+                    </td>
+                    <td style="text-align:center; padding:8px 3px">총 0석</td>
+                    <td style="text-align:center; padding:8px 3px">20분 뒤에 3석 예상</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> <!-- end of table-responsive -->
+          </div> <!-- end of card -->
+        </div> <!-- end of col -->
+      </div> <!-- end of row -->
+
+      <div class="row">
+
+<!-- 여기부터 살리면 될 듯 -->
+        <div class="col-md-12">
+          <div class="row h-100">
+
+<!--그래프 부분-->
+<!--          <div class="col-md-6">
+              <div class="card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between mb-4">
+                    <h2 class="mb-0 text-md">Bookings report</h2>
+                    <div class="form-group mb-0">
+                      <label for="barChartFilter" class="sr-only">Filter revenue</label>
+                      <select class="custom-select" id="barChartFilter">
+                        <option disabled>Filter revenue</option>
+                        <option>Daily</option>
+                        <option>Weekly</option>
+                        <option selected>Monthly</option>
+                        <option>Yearly</option>
+                      </select>
+                    </div> <!-- end of form-group -->
+<!--              </div> -->    <!-- end of d-flex -->
+<!--                 <canvas id="barChart"></canvas>
+                </div> --> <!-- end of card-body -->
+<!--             </div> --> <!-- end of card -->
+<!--            </div> --><!-- end of col -->
+
+<!--여기부터 살리면 될 듯 -->
+<!-- 그래프 부분. Charts.js 참고 --> 
+<!-- <div class="col-md-6">
+  <div class="card h-100">
+    <div class="card-body">
+      <div class="d-flex justify-content-between mb-4">
+        <h2 class="mb-0 text-md">Bookings report</h2>
+        <div class="form-group mb-0">
+          <label for="barChartFilter" class="sr-only">Filter revenue</label>
+          <select class="custom-select" id="barChartFilter">
+            <option disabled>Filter revenue</option>
+            <option>Daily</option>
+            <option>Weekly</option>
+            <option selected>Monthly</option>
+            <option>Yearly</option>
+          </select>
+        </div>  end of form-group -->
+<!--     </div>-->  <!-- end of d-flex -->
+<!--      <canvas id="barChart_two"></canvas>
+    </div>--> <!-- end of card-body -->
+<!--  </div>--> <!-- end of card -->
+<!--</div>--> <!-- end of col -->
+
+<!--</div>--> <!-- end of row -->
+<!-- </div> --> <!-- end of col -->
+<!-- </div>-->
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+<figure class="highcharts-figure">
+  <div id="container"></div>
+  <p class="highcharts-description">
+    This chart shows how data labels can be added to the data series. This
+    can increase readability and comprehension for small datasets.
+  </p>
+</figure>
+<script  type="text/javascript">
+  Highcharts.chart('container', {
+    chart: {
+      type: 'line'
+    },
+    title: {
+      text: '요일별 방문 지수'
+    },
+    subtitle: {
+      text: '최근 일주일 지표'
+    },
+    xAxis: {
+      categories: ['월', '화', '수', '목', '금', '토', '일']
+    },
+    yAxis: {
+      title: {
+        text: '방문 테이블 수'
+      }
+    },
+    plotOptions: {
+      line: {
+        dataLabels: {
+          enabled: true
+        },
+        enableMouseTracking: false
+      }
+    },
+    series: [{
+      name: '방문 테이블 수',
+      data: [10, 20, 15, 20, 13, 17, 30]
+    }]
+  });
+  
+  </script>
+  <figure class="highcharts-figure">
+    <div id="container2"></div>
+    <p class="highcharts-description">
+      This chart shows how data labels can be added to the data series. This
+      can increase readability and comprehension for small datasets.
+    </p>
+  </figure>
+  <script  type="text/javascript">
+    Highcharts.chart('container2', {
+      chart: {
+        type: 'line'
+      },
+      title: {
+        text: '요일별 방문 지수'
+      },
+      subtitle: {
+        text: '최근 일주일 지표'
+      },
+      xAxis: {
+        categories: ['월', '화', '수', '목', '금', '토', '일']
+      },
+      yAxis: {
+        title: {
+          text: '방문 테이블 수'
+        }
+      },
+      plotOptions: {
+        line: {
+          dataLabels: {
+            enabled: true
+          },
+          enableMouseTracking: false
+        }
+      },
+      series: [{
+        name: '방문 테이블 수',
+        data: [10, 20, 15, 20, 13, 17, 30]
+      }]
+    });
+    
+    </script>
+      <footer class="row mt-3">
+        <div class="col">
+          <p class="mb-0 text-secondary">&copy; 2019 Alex Andonie. All rights reserved.</p>
+        </div>
+      </footer>
+    </main> <!-- end of container-fluid -->
+    </div>
+<!-- end of d-flex -->
+
+
+
+  <!-- <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#ff5e15"/></svg></div>
+  -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.3.0/perfect-scrollbar.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=NodeList.prototype.forEach"></script>
+
+  <script src="../../../main/js/jquery-3.3.1.min.js"></script>
+  <script src="../../../main/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../../../main/js/jquery-ui.js"></script>
+  <script src="../../../main/js/popper.min.js"></script>
+  <script src="../../../main/js/bootstrap.min.js"></script>
+  <script src="../../../main/js/owl.carousel.min.js"></script>
+  <script src="../../../main/js/jquery.stellar.min.js"></script>
+  <script src="../../../main/js/jquery.countdown.min.js"></script>
+  <script src="../../../main/js/bootstrap-datepicker.min.js"></script>
+  <script src="../../../main/js/jquery.easing.1.3.js"></script>
+  <script src="../../../main/js/aos.js"></script>
+  <script src="../../../main/js/jquery.fancybox.min.js"></script>
+  <script src="../../../main/js/jquery.sticky.js"></script>
+
+
+ <!--<script src="js/index.js"></script>-->
+ <script src="../../../main/js/main.js"></script>
+
+  
+
+</body>
+</html>
