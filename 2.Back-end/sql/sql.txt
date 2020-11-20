@@ -1,0 +1,27 @@
+CREATE DATABASE food;
+
+CREATE TABLE Restaurant_Info(
+   RID           INTEGER  NOT NULL PRIMARY KEY 
+  ,Name          VARCHAR(9) NOT NULL
+  ,Table_Amount  INTEGER  NOT NULL
+  ,Authorization BIT  NOT NULL
+  ,x             NUMERIC(11,8) NOT NULL
+  ,y             NUMERIC(10,6) NOT NULL
+);
+INSERT INTO Restaurant_Info(RID,Name,Table_Amount,Authorization,x,y) VALUES (1234,'준서네 식당',5,1,37.56557867,126.983709);
+
+CREATE TABLE Table_Info(
+   RID       INTEGER  NOT NULL
+  ,Tnum      BIT  NOT NULL
+  ,starttime VARCHAR(40) NOT NULL
+  ,outtime   VARCHAR(40)
+  ,OX        INTEGER  NOT NULL
+  ,week      INTEGER 
+);
+
+
+INSERT INTO Table_Info(RID,Tnum,starttime,outtime,OX,week) VALUES (1234,1,'2020-11-20 10:57','2020-11-20 12:57',1,0);
+INSERT INTO Table_Info(RID,Tnum,starttime,outtime,OX,week) VALUES (1234,1,now(),date_add(now(),INTERVAL 1 MINUTE),1,WEEKDAY(now()));
+select * FROM table_info WHERE DATE(starttime)>= DATE_SUB(now(),INTERVAL 7 DAY);
+WEEKDAY(now()) -> 현재의 요일 입력
+DATE_SUB(now(),INTERVAL 7 DAY); -> 현재로 부터 7일전 날짜에 대한 정보 필터링
