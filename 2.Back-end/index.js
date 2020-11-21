@@ -11,8 +11,9 @@ connection.connect();
 //route, routing
 //app.get('/', (req, res) => res.send('Hello World!'))
 app.use(express.static('data'));
+
 app.get('/', function(req, res) { 
-    connection.query('SELECT * FROM Table_info WHERE DATE(starttime)>= DATE_SUB(now(),INTERVAL 7 DAY)', 
+    connection.query('SELECT * FROM Table_info WHERE DATE(starttime)>= DATE_SUB(now(),INTERVAL 7 DAY)',
     function (error, results, fields) {
     if (error) throw error;
     console.log('The solution is: ', results);
@@ -24,6 +25,7 @@ app.get('/', function(req, res) {
     var fricount = 0;
     var satcount = 0;
     var suncount = 0;
+
     var step;
     for (step = 0; step < results.length; step++) {
         //console.log(results[step].week);
@@ -61,7 +63,12 @@ app.get('/', function(req, res) {
 
 
     <figure class="highcharts-figure">
-    <div id="container"></div>
+    <div id="container1"></div>
+    <p class="highcharts-description">
+        This chart shows how data labels can be added to the data series. This
+        can increase readability and comprehension for small datasets.
+    </p>
+    <div id="container2"></div>
     <p class="highcharts-description">
         This chart shows how data labels can be added to the data series. This
         can increase readability and comprehension for small datasets.
@@ -69,7 +76,39 @@ app.get('/', function(req, res) {
     </figure>
     <!-- partial -->
     <script  type="text/javascript">
-    Highcharts.chart('container', {
+    Highcharts.chart('container1', {
+        chart: {
+        type: 'line'
+        },
+        title: {
+        text: '요일별 방문 지수'
+        },
+        subtitle: {
+        text: '최근 일주일 지표'
+        },
+        xAxis: {
+        categories: ['월', '화', '수', '목', '금', '토', '일']
+        },
+        yAxis: {
+        title: {
+            text: '방문 테이블 수'
+        }
+        },
+        plotOptions: {
+        line: {
+            dataLabels: {
+            enabled: true
+            },
+            enableMouseTracking: false
+        }
+        },
+        series: [{
+        name: '방문 테이블 수',
+        data: [${moncount}, ${tuecount}, ${wencount}, ${thrcount}, ${fricount}, ${satcount}, ${suncount}]
+        }]
+    });
+
+    Highcharts.chart('container2', {
         chart: {
         type: 'line'
         },
