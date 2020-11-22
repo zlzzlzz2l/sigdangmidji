@@ -1,0 +1,60 @@
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<select id="mySelect">
+    <option value="" selected disabled hidden >선택해주세요.</option>
+    <option value="0">월</option>
+    <option value="1">화</option>
+    <option value="2">수</option>
+    <option value="3">목</option>
+    <option value="4">금</option>
+    <option value="5">토</option>
+    <option value="6">일</option>
+</select>
+
+<div id="container" style="height: 400px; width: 500px"></div>
+
+<script  type="text/javascript">
+const chart = Highcharts.chart('container', {
+    plotOptions: {
+        series: {
+            point: {
+            }
+        }
+    },
+    title: {
+      text: '요일별 방문 지수'
+    },
+    series: [{
+        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+    }]
+});
+document.getElementById("mySelect").onchange = function() {myFunction()};
+function myFunction() {
+  var x = document.getElementById("mySelect").value;
+  if (x == 0){
+    const series = chart.series[0];
+    if (series.data.length) {
+        chart.series[0].remove();
+    };
+    chart.addSeries({
+        data: [100, 100, 100, 100, 29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5]
+    });
+  }else if (x == 1){
+    const series = chart.series[0];
+    if (series.data.length) {
+        chart.series[0].remove();
+    };
+    chart.addSeries({   
+        data: [200, 200, 200, 200, 29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5]
+    });
+  }else if (x == 2){
+    const series = chart.series[0];
+    if (series.data.length) {
+        chart.series[0].remove();
+    };
+    chart.addSeries({
+        data: [200, 200, 200, 200]
+    });
+};
+}
+</script>
