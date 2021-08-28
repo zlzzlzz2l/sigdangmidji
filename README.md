@@ -44,9 +44,12 @@
 ## **실행 화면**
 ### **웹 페이지**
 음식점 검색 및 지도 페이지
-<img src ="https://user-images.githubusercontent.com/49181283/118804260-6ebc8b00-b8df-11eb-83eb-06fad83b0c96.png"></br></br>
-식당 상세 정보 페이지(방문자 수, 소독 시간, 잔여 좌석)</br>
-<img src ="https://user-images.githubusercontent.com/49181283/118804266-72501200-b8df-11eb-8328-ef58e390d8ff.png"></br></br>
+
+![image](https://user-images.githubusercontent.com/48669011/131219967-beee2b30-fac8-4025-9daf-c8883c4822c7.png)
+
+식당 상세 정보 페이지(방문자 수, 소독 시간, 잔여 좌석)
+
+![image](https://user-images.githubusercontent.com/48669011/131219988-af97ca66-fecb-4831-92dd-5e14e7f4c35d.png)
 
 ### **반응형 웹 페이지**
 음식점 검색 및 지도 페이지
@@ -54,5 +57,6 @@
 ![image](https://user-images.githubusercontent.com/48669011/131219819-40588872-0fb7-4976-a1d1-1f518eb50f8b.png)
 
 
-식당 상세 정보 페이지(방문자 수, 소독 시간, 잔여 좌석)</br>
+식당 상세 정보 페이지(방문자 수, 소독 시간, 잔여 좌석)
+
 ![image](https://user-images.githubusercontent.com/48669011/131219862-1d333f46-157f-4587-97d5-b63c67c59c50.png)
